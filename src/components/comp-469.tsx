@@ -57,7 +57,7 @@ export default function ExampleTable() {
       <Table>
         <TableHeader className="bg-transparent">
           <TableRow className="hover:bg-transparent">
-            <TableHead>Name</TableHead>
+            <TableHead className="text-left">Name</TableHead>
             <TableHead>Email</TableHead>
             <TableHead>Location</TableHead>
             <TableHead>Status</TableHead>

@@ -1,20 +1,24 @@
 import { useState } from 'react'
 import './App.css'
-import { Button } from './components/ui/button'
-import ExampleTable from './components/comp-469'
+import InvestmentForm from './components/InvestmentForm'
+import InvestmentsTable from './components/InvestmentsTable'
 
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [investmentData, setInvestmentData] = useState({
+    initialInvestment: 10000,
+    annualInvestment: 1200,
+    expectedReturn: 6,
+    duration: 10
+  })
   return (
-    <>
-      <h1 className='text-5xl my-2'>Lexdrel React Template</h1>
-      <p className='my-2'>Count: {count}</p>
-      <Button className='me-2' onClick={() => setCount(count + 1)}>Add</Button>
-      <Button className='me-2' onClick={() => setCount(count - 1)}>Substract</Button>
-      <ExampleTable />
-    </>
+    <div className="w-3/4 mx-auto mt-10">
+      <InvestmentForm
+        investmentData={investmentData}
+        setInvestmentData={setInvestmentData}
+      />
+      <InvestmentsTable investmentData={investmentData} />
+    </div>
   )
 }
 

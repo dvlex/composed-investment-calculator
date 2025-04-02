@@ -11,7 +11,10 @@
     "baseUrl": ".",
     "paths": {
       "@/*": [
-        "./src/*"
+      "./src/*"
+      ],
+      "utils": [
+      "./src/utils"
       ]
     },
     
